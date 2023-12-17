@@ -14,8 +14,8 @@ It is not (yet?) very sophisticated, but still interesting for day-to-day use. F
 4. Build and run the Docker container:
 
 ```shell
-docker composer build
-docker composer up -d
+docker compose build
+docker compose up -d
 ```
 
 Enjoy the timer at: http://localhost:8000
