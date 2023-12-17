@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    php_apache:
+        image: webdevops/php-apache:8.2-alpine
+        container_name: redmine_timer_php_apache
+        working_dir: /app
+        environment:
+            - WEB_DOCUMENT_ROOT=/app/public
+            - PHP_DISPLAY_ERRORS=1
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/app:rw

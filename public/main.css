@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    background: #628DB6;
+    color: #FFF;
+    font-weight: 400;
+    padding: 1em;
+    text-align: center;
+}
+
+input, textarea, select {
+    background: #FFF;
+    border: 1px solid #628DB6;
+    border-radius: 12px;
+    font-family: inherit;
+    padding: 1em;
+    width: 100%;
+}
+
+footer {
+    font-size: .85em;
+    padding: 1em;
+    text-align: center;
+}
+
+.timer {
+    margin: 2em auto;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.time {
+    font-size: 2em;
+    margin: 0 0 .5em 0;
+}
+
+.timer button {
+    background: #628DB6;
+    border: 1px solid #628DB6;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+    padding: .5em;
+}
+
+input[type="submit"] {
+    background: #628DB6;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.notification {
+    padding: .5em;
+    text-align: center;
+}
+
+.success {
+    background: green;
+    color: #FFF;
+}
+
+.error {
+    background: red;
+    color: #FFF;
+}
+
+.form-content {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0 1em;
+    width: 100%;
+}
+
+.form-content > div {
+    margin: .5em 0;
+}
