@@ -4,7 +4,7 @@ Very (very!) basic web app used to register time entries with Redmine.
 
 It is not (yet?) very sophisticated, but still interesting for day-to-day use. Feel free to fork it and improve to your needs :-)
 
-![Screenshot](doc/redmine-timer.jpg)
+![Screenshot](doc/screenshot.jpg)
 
 ## Install
 
