@@ -15,7 +15,6 @@ if ('POST' === $_SERVER['REQUEST_METHOD']) {
 }
 
 $todayHours = getTodayRegisteredHours($config);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +48,15 @@ $todayHours = getTodayRegisteredHours($config);
             <form method="post" action="/">
                 <div class="form-content">
                     <div>
-                        <input type="number" name="issue_id" placeholder="Issue #" required="required" />
+                        <input type="number" id="issue-input" name="issue_id" placeholder="Issue #" required="required" autocomplete="off" />
+                        <dialog id="issue-dialog">
+                            <p>Favorites</p>
+                            <ul id="issue-list">
+                                <?php foreach ($config['defaults']['issue_ids'] as $id => $name) { ?>
+                                <li data-id="<?php echo $id; ?>"><?php echo $name; ?></li>
+                                <?php } ?>
+                            </ul>
+                        </dialog>
                     </div>
                     <div>
                         <input type="number" id="hours-input" name="hours" min="0" step="0.01" placeholder="Hours" required="required" />

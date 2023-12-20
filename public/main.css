@@ -82,4 +82,33 @@ input[type="submit"] {
 
 .form-content > div {
     margin: .5em 0;
+    position: relative;
+}
+
+#issue-dialog {
+    background: #FFF;
+    border: 1px solid #628DB6;
+    font-size: 13px;
+    left: 0;
+    max-height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+    z-index: 100;
+}
+
+#issue-dialog > p {
+    background: #628DB6;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    padding: .5em;
+}
+
+#issue-list > li {
+    cursor: pointer;
+    padding: .5em;
+}
+
+#issue-list > li:hover {
+    background: #628DB6;
+    color: #FFF;
 }

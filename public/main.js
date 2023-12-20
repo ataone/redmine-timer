@@ -12,6 +12,9 @@
     const resetButton = document.getElementById('timer-reset');
 
     const notification = document.getElementById('notification');
+    const issueInput = document.getElementById('issue-input');
+    const issueDialog = document.getElementById('issue-dialog');
+    const issueList = document.getElementById('issue-list');
     const hoursInput = document.getElementById('hours-input');
 
     if (notification) {
@@ -19,6 +22,23 @@
             notification.remove();
         }, 5000);
     }
+
+    issueInput.addEventListener('focus', function() {
+        if (issueList.children.length && !issueDialog.open) {
+            issueDialog.open = 'open';
+        } else {
+            issueDialog.close();
+        }
+    });
+
+    issueList.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if (event.target.matches('li')) {
+            issueInput.value = event.target.dataset.id;
+            issueDialog.close();
+        }
+    });
 
     startButton.addEventListener('click', function() {
         interval = setInterval(function() {

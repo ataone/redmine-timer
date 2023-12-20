@@ -3,6 +3,10 @@
 return [
     'defaults' => [
         'activity_id' => 9,
+        'issue_ids' => [
+            // Issue Id => Issue Label
+            1000 => 'Issue#Id – Issue Label Exemple',
+        ],
     ],
     'redmine' => [
         'api_url' => 'https://redmine.example.com',
