@@ -23,7 +23,7 @@
         }, 5000);
     }
 
-    issueInput.addEventListener('focus', function() {
+    issueInput.addEventListener('click', function() {
         if (issueList.children.length && !issueDialog.open) {
             issueDialog.open = 'open';
         } else {

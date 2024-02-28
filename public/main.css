@@ -26,9 +26,17 @@ input, textarea, select {
 }
 
 footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     font-size: .85em;
+    justify-content: center;
     padding: 1em;
-    text-align: center;
+}
+
+table > caption {
+    font-weight: 700;
+    margin: 1em 0;
 }
 
 .timer {
@@ -71,6 +79,18 @@ input[type="submit"] {
 .error {
     background: red;
     color: #FFF;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .form-content {

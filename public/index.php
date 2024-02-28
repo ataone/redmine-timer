@@ -1,5 +1,6 @@
 <?php
 
+use function App\getThisWeekRegisteredHours;
 use function App\getTodayRegisteredHours;
 use function App\registerTime;
 
@@ -15,6 +16,8 @@ if ('POST' === $_SERVER['REQUEST_METHOD']) {
 }
 
 $todayHours = getTodayRegisteredHours($config);
+$thisWeekHours = getThisWeekRegisteredHours($config);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +84,19 @@ $todayHours = getTodayRegisteredHours($config);
             </form>
         </main>
         <footer>
-            <?php echo $todayHours; ?> hour<?php echo $todayHours >= 2 ? 's' : ''; ?> registered today
+            <p class="text-center"><?php echo $todayHours; ?> hour<?php echo $todayHours >= 2 ? 's' : ''; ?> registered today</p>
+
+            <table>
+                <caption>This week</caption>
+                <tbody>
+            <?php foreach ($thisWeekHours as $day => $hours): ?>
+                <tr>
+                    <td class="text-left"><?php echo (new DateTime($day))->format('l j F') ?></td>
+                    <td class="text-right"><?php echo $hours ?></td>
+                </tr>
+            <?php endforeach; ?>
+                </tbody>
+            </table>
         </footer>
         <script src="main.js"></script>
     </body>
